@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--Red);
+  background-image: url(images/bg-intro-desktop.png);
+}
+
+.container {
+  display: grid;
+  width: 75%;
+  height: 100vh;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  column-gap: 50px;
+}
+
+.one {
+  color: #fff;
+}
+
+.one h1 {
+  margin-bottom: 1.25rem;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+}
+
+.one p {
+  font-size: 0.9rem;
+}
+
+.two .try {
+  margin-bottom: 1.25rem;
+  padding: 0.9735rem 3.125rem;
+  color: #fff;
+  background-color: var(--Blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 7px 0 rgba(0, 0, 0, 0.2);
+}
+
+.two .try span {
+  font-weight: 400;
+}
+
+.try,
+.form {
+  border-radius: 10px;
+  box-shadow: 0 7px 0 rgba(0, 0, 0, 0.2);
+}
+
+.two .form {
+  padding: 30px;
+  background-color: #fff;
+}
+
+.form input,
+button {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  padding: 15px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+button {
+  margin-bottom: 15px;
+  color: #fff;
+  background-color: var(--Green);
+  text-transform: uppercase;
+  border: none;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+button:active{
+  opacity: .8;
+}
+
+input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.form p {
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.form p span {
+  font-weight: 700;
+  color: var(--Red);
+}
+
+.form .field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.field .icon {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.field p {
+  display: none;
+  margin-top: 5px;
+  text-align: right;
+  color: var(--Red);
+}
+
+@media screen and (max-width: 375px) {
+  .one {
+    text-align: center;
+  }
+  .one h1 {
+    font-size: 1.5rem;
+    line-height: inherit;
+  }
+
+  .two{
+    align-self: start;
+  }
+
+}
